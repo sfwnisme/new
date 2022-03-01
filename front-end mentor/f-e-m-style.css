@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #0c192c;
+  --main-color: #15273f;
+  --p-color: #8ba7d7;
+  --hover-color: #06faf8;
+  --hover-img-color: #06fafa3f;
+  --b-radius: 10px;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.container {
+  padding: 20px;
+  box-shadow: 0px 5px 20px #030b18;
+}
+/* ----------------------------- */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .container {
+  background-color: var(--main-color);
+  width: 300px;
+  border-radius: var(--b-radius);
+  margin: 100px auto;
+}
+.box .container .image {
+  position: relative;
+  overflow: hidden;
+  /* transition: 1s; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.box .container .image img {
+  max-width: 100%;
+  border-radius: var(--b-radius);
+  display: block;
+}
+
+.box .container .image .over {
+  display: none;
+  position: absolute;
+  background-color: #06fafa5d;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  border-radius: var(--b-radius);
+  transition: 1s;
+}
+.box .container .image .over img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.box .container .image:hover .over {
+  display: block;
+}
+.box .container .txt {
+  margin: 20px 0;
+}
+.box .container .txt h2 {
+  color: white;
+  transition: 1s;
+}
+.box .container .txt h2:hover {
+  color: var(--hover-color);
+}
+.box .container .txt p {
+  color: var(--p-color);
+  margin-top: 10px;
+}
+/* ----------------- */
+.box .container .price {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #8ba7d71e;
+}
+.box .container .price .eth {
+  color: var(--hover-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .container .price .time {
+  color: var(--p-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ----------------------- */
+.box .container .profile {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 10px;
+}
+.box .container .profile img {
+  width: 30px;
+  border: 2px solid var(--p-color);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.box .container .profile p {
+  color: var(--p-color);
+}
+.box .container .profile span {
+  color: white;
+}
+.box .container .profile span:hover {
+  color: var(--hover-color);
+}
